@@ -16,13 +16,14 @@ import java.util.Date;
 public class Demo1 {
  
     public static void main(String[] args) {
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
         Date now = new Date();
         String fmtDate = sdf.format(now);
-        System.out.println(now.toString());
+        System.out.println(fmtDate);
         
         Calendar now2 = Calendar.getInstance();
-        System.out.println(now2.toString());
+        Date calDate = now2.getTime();
+        System.out.println(sdf.format(calDate));
     }
     
 }
